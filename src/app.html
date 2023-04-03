@@ -7,12 +7,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
         %sveltekit.head%
     </head>
-    <body class="dark:bg-black" data-sveltekit-preload-data="hover">
+    <body
+        class="dark:bg-black bg-white text-black dark:text-white h-full min-h-screen"
+        data-sveltekit-preload-data="hover"
+    >
         <div style="display: contents">%sveltekit.body%</div>
     </body>
 </html>

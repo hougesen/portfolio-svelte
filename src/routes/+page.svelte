@@ -2,6 +2,9 @@
     import Contact from "$lib/components/Contact.svelte";
     import Hero from "$lib/components/Hero.svelte";
     import ProjectList from "$lib/components/ProjectList.svelte";
+    import type { PageData } from "./$types";
+
+    export let data: PageData;
 </script>
 
 <svelte:head>
@@ -42,8 +45,10 @@
     </script>
 </svelte:head>
 
-<Hero />
+<main class="flex flex-col gap-4 h-full">
+    <Hero />
 
-<ProjectList />
+    <ProjectList projects={data.projects} />
 
-<Contact />
+    <Contact />
+</main>

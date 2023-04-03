@@ -1,6 +1,7 @@
 <script lang="ts">
     import MadsHougesenPng from "$lib/images/mads-hougesen-image.png";
     import MadsHougesenWebp from "$lib/images/mads-hougesen-image.webp";
+    import SocialIcons from "./SocialIcons.svelte";
 
     function switchHighlightColor(): void {
         const min = 70;
@@ -12,18 +13,18 @@
 </script>
 
 <section id="hero" class="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-    <div class=" my-auto flex flex-col gap-4 lowercase">
-        <h1 class="text-5xl lg:text-6xl font-bold lowercase">
+    <div class="my-auto flex flex-col lowercase">
+        <h1 class="text-5xl lg:text-6xl font-bold lowercase mb-4">
             <span on:mouseover={switchHighlightColor} on:focus={switchHighlightColor} class="highlight"> Hi, </span>
             I'm Mads
         </h1>
 
-        <p class="text-xl">
+        <p class="text-xl mb-4">
             I am a software developer from Denmark. Lover of all things programming. Currently into Rust, Python and
             TypeScript.
         </p>
 
-        <p class="text-xl">
+        <p class="text-xl mb-2">
             I work @
             <a
                 href="https://cavea.io?utm_source=mhouge.dk"
@@ -36,7 +37,7 @@
             where I spend most of my time building tools for live streamers. Some projects I've worked on include:
         </p>
 
-        <ul class="ml-8 mb-4 text-xl list-disc">
+        <ul class="text-xl list-disc ml-4 mb-4">
             <li>
                 A tool for automatically
                 <a
@@ -64,9 +65,10 @@
 
             <li>Dozens of systems for tracking social media performance</li>
         </ul>
+        <SocialIcons />
     </div>
 
-    <picture class="max-w-full lg:w-fit order-first lg:order-1 mr-auto lg:mr-0 ml-auto lg:text-right">
+    <picture class="max-w-full lg:w-fit order-first lg:order-1 mr-auto lg:mr-0 pl-16 my-auto ml-auto lg:text-right">
         <source srcset={MadsHougesenWebp} type="image/webp" />
 
         <source srcset={MadsHougesenPng} type="image/png" />
