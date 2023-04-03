@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --highlight-color: red;
+}
+
+* {
+    transition: 300ms;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.highlight {
+    color: var(--highlight-color) !important;
+}
+
+.highlight--hover:hover {
+    color: var(--highlight-color) !important;
+}
