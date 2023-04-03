@@ -15,7 +15,7 @@
             />
         </svg>
 
-        <a href="mailto:mads@mhouge.dk" class="text-xl underline highlight--hover"> mads@mhouge.dk </a>
+        <a href="mailto:mads@mhouge.dk" class="text-xl underline highlight--hover">mads@mhouge.dk</a>
     </div>
 
     <div class="flex items-center gap-2 mb-4">

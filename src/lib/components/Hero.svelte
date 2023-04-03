@@ -30,10 +30,8 @@
                 href="https://cavea.io?utm_source=mhouge.dk"
                 rel="noreferrer noopener"
                 target="_blank"
-                class="highlight--hover underline"
+                class="highlight--hover underline">cavea.io</a
             >
-                cavea.io
-            </a>
             where I spend most of my time building tools for live streamers. Some projects I've worked on include:
         </p>
 
@@ -44,10 +42,8 @@
                     href="https://capturelab.gg?utm_source=mhouge.dk"
                     rel="noreferrer noopener"
                     target="_blank"
-                    class="highlight--hover underline"
+                    class="highlight--hover underline">capturing highlights in livestreams</a
                 >
-                    capturing highlights in livestreams
-                </a>
             </li>
 
             <li>
@@ -56,10 +52,8 @@
                     href="https://adlab.gg?utm_source=mhouge.dk"
                     rel="noreferrer noopener"
                     target="_blank"
-                    class="highlight--hover underline"
+                    class="highlight--hover underline">influencer campaigns</a
                 >
-                    influencer campaigns
-                </a>
                 on Twitch
             </li>
 
