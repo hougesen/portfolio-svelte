@@ -1,5 +1,7 @@
 <script lang="ts">
     import json2struct from "json2struct";
+    import prettier from "prettier/standalone";
+    import parserTypeScript from "prettier/parser-typescript";
 
     $: input = "";
     $: convertedStruct = "";
@@ -9,7 +11,15 @@
     function convert() {
         try {
             convertedStruct = json2struct(selectedLanguage, input);
-        } catch {
+
+            if (selectedLanguage === "typescript") {
+                convertedStruct = prettier.format(convertedStruct, {
+                    parser: "typescript",
+                    plugins: [parserTypeScript],
+                });
+            }
+        } catch (error) {
+            console.error("errror", error);
             convertedStruct = "ERROR: Invalid JSON";
         }
     }
@@ -20,7 +30,7 @@
 
 <div class="mt-4 flex flex-col gap-4 h-full">
     <div class="flex gap-4">
-        <select bind:value={selectedLanguage} class="text-black ml-auto px-3 p-2 rounded">
+        <select bind:value={selectedLanguage} class="text-black ml-auto px-3 p-2 rounded" on:change={convert}>
             <option value="typescript"> TypeScript </option>
             <option value="python"> Python </option>
             <option value="julia"> Julia </option>
@@ -33,10 +43,10 @@
     <div class="pb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         <textarea
             bind:value={input}
-            class="w-full h-full text-white bg-black dark:text-black dark:bg-white min-h-[50vh] rounded"
+            class="w-full h-full text-white bg-black p-4 dark:text-black dark:bg-white min-h-[50vh] rounded"
         />
 
-        <pre class="w-full h-full text-white bg-black dark:text-black dark:bg-white min-h-[50vh] rounded">
+        <pre class="w-full h-full text-white bg-black p-4 dark:text-black dark:bg-white min-h-[50vh] rounded">
 {convertedStruct}
         </pre>
     </div>
